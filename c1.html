@@ -1,0 +1,138 @@
+<html>
+<style>
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    font-size: 12px;
+    margin: 4px 2px;
+    border-radius: 8px
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.p1{color:blue;
+  font-size:20pt;
+  font-family:標楷體；
+font-weight:600;
+}
+.p2{color:brown;
+  font-size:15pt;
+  font-family:標楷體；
+font-weight:600;
+}
+
+ul{list-style-type:circle;
+}
+.out{list-style-position:outside;}
+
+</style>
+<body bgcolor="#7ffff3ff">
+<table border="1" cellpading="10" cellspacing="1" style="border:2px #4CAF50 solid;">
+<tr><td rowspan="2" align="left" width=50%>
+<div id=myText2 style="color:#A830FF;font-weight:600;font-size:16pt"></div>
+<script>
+text="最新消息: 即日起免費體驗Dreamer平台!";
+text=text+"　　　　  ";	// 加一些全形空白
+
+function showMovingText(){
+	var n = text.length;
+	text = text.substr(1, n-1)+text.substr(0, 1);		// 將第一個字搬到最後面
+	document.getElementById("myText2").innerHTML = text;	// 設定至 <div> 標籤內文
+	window.status = text;					// 設定至狀態列
+	setTimeout("showMovingText()", 300);			// 0.4 秒閃一遍
+}
+showMovingText();
+</script>
+</p>
+<ul>
+<li class=out><p class=p2> 【公告】Dreamer誠徵對於教育有熱血的教師，歡迎投稿履歷!</p> 
+<li class=out><p class=p2> 【公告】Dreamer將於2018.06.10進行網路更新，造成不便，請多見諒。</p> 
+<li class=out><p class=p2> 【殊榮】今年五月Dreamer參加教育部教育平台競賽，榮獲創意獎之殊榮</p> 
+<li class=out><p class=p2> 【殊榮】郝棒老師帶領學生參加全國數學奧林匹克，榮獲亞軍!!</p> 
+<li class=out><p class=p2> 【演講】2018.06.01《寂靜的夏天》，李奧醫師主講，歡迎踴躍報名！</p> 
+<li class=out><p class=p2> 【演講】2018.06.03 我的視角--無人知曉的澎湖越南難民營</p> 
+</ul></p></td>
+<td><script>
+text1 = new Array();
+i = 0;
+text1[i++] = "教育不是灌輸,而是點燃火焰。";
+text1[i++] = "培養人，就是培養他對前途的希望。 ";
+text1[i++] = "教育是使學生喜歡你所教的東西。";
+text1[i++] = "多一把衡量的尺，就會多一批好學生。";
+text1[i++] = "有價值的知識，都是由自學中得來的。 ";
+text1[i++] = "人只能為別人引路，不能替他們走路。";
+document.write("<h2 align=center>");
+document.write("<font face='Helvetical,Arial' color='#408080'><I>");
+document.write("佳句 :"+text1[Math.floor(Math.random()*text1.length)]);
+document.write("</I></font>");
+document.write("</h2>");
+</script>
+</td></tr>
+<tr><td align=center><script language="JavaScript">
+currentIndex = 0;				
+photoNum = 6;	
+time=3;		
+imageArray = new Array();	
+for (i=0; i<photoNum; i++){
+	imageArray[i] = new Image();
+	imageArray[i].src = ""+i+".jpg";
+        
+
+}
+function nextImageUrl(){
+     	currentIndex++;				
+	currentIndex=currentIndex % photoNum;	
+        timer=setTimeout("document.images['image'].src=nextImageUrl()",time*1000);
+        return(imageArray[currentIndex].src); 
+}
+
+function beforeImageUrl(){
+        if(currentIndex==0){
+        currentIndex=photoNum;
+        }
+     	currentIndex--;				
+	currentIndex=currentIndex % photoNum;	
+        timer=setTimeout("document.images['image'].src=beforeImageUrl()",time*1000);
+        return(imageArray[currentIndex].src); 
+}
+
+function resttime(){
+        document.pic.rest.value=time;
+        time=time-1;
+        if(time==0){
+        time=3;
+        }
+        timer2=setTimeout("resttime()",1000);
+}
+
+timer1=setTimeout("document.images['image'].src=nextImageUrl()",time*1000);
+setTimeout("resttime()",0);
+</script>
+<form name=pic>
+<img src="0.jpg" align="middle" name="image" border="1" height="280" onMouseUp="clearTimeout(timer);clearTimeout(timer1);this.src=nextImageUrl()" ><br>
+<input type="button" class="button button1" name="before" value="前一張" onClick="clearTimeout(timer);clearTimeout(timer1);image.src=beforeImageUrl()" >
+<input type="button" class="button button1" name="after" value="後一張" onClick="clearTimeout(timer);clearTimeout(timer1);image.src=nextImageUrl()">
+</form>
+</td></tr>
+</table>
+</body>
+</html>

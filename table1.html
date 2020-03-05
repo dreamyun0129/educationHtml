@@ -1,0 +1,63 @@
+<html>
+
+<style>
+p{color:blue;
+  font-size:18pt;
+  font-family:標楷體；
+  text-align:center；}
+ul{list-style-type:square;}
+
+</style>
+
+<form>
+<table align="center" border="0" width="70%" height="180%"> 
+<tr><th colspan="2" align="center" bgcolor="#41199fff" height="20%"><h1 align="center">FUN FUN簡易教育平台</h1></tr>
+<tr><th colspan="2" align="center" height="40%" bgcolor="#41199fff"><head>
+<meta http-equiv="Refresh" content="20">
+</head>
+<script>
+text1 = new Array();
+i = 0;
+text1[i++] = "我們跌倒的地方，是我們人生旅途上的墊腳石。";
+text1[i++] = "「行動」是難下的決定，剩下的只是堅持。 ";
+text1[i++] = "為追求進步而奮鬥，但別為了追求完美而努力。";
+text1[i++] = "強烈的動機，往往可以戰勝天賦。";
+text1[i++] = "失敗很正常，如果沒有經歷失敗，表示你還不夠創新。 ";
+text1[i++] = "即使輸掉了一切，也不要輸掉微笑。";
+document.write("<h2 align=center>");
+document.write("<font face='Helvetical,Arial' color='#408080'><I>");
+document.write("每日一句 : "+text1[Math.floor(Math.random()*text1.length)]);
+document.write("</I></font>");
+document.write("</h2>");
+</script>
+<script>
+image=["1.jpg", "2.jpg", "3.jpg", "4.jpg",
+	"5.jpg","6.png"];
+pickedImage = image[Math.floor(Math.random()*image.length)];
+document.write("<img src="+pickedImage+">");
+</script>
+
+</tr>
+<tr><td rowspan="6" width="20%" bgcolor="#41199fff" height="100%">
+<img src="念書.png" style="width:160px; height:140px; align:left">
+<ul>
+<li><p><a href="關於.html" target="3">關於我們</a></p></li>
+<li><p>知識補給</p></li>
+<ul style=list-style-type:circle;font-size:16pt >
+ <li><a href="英.html" target="3">英文English</a></li>
+ <li><a href="音.html" target="3">音樂Music</a></li>
+ <li><a href="數.html" target="3">數學Math</a></li>
+ <li><a href="海.html" target="3">海洋Ocean</a></li>
+ <li><a href="地.html" target="3">地理Geography</a></li>  	
+</ul>
+<li><p><a href="放鬆.html" target="3">放鬆一下</a></p></li>
+<li><p><a href="網站.html" target="3">相關網站</a></p></li>
+<li><p><a href="聯絡.html" target="3">聯絡我們</a></p></li>
+</ul>
+<script>
+music=["聽海.mid", "膽小鬼.mid","music4.mp3", "如果雲知道.mid", "music1.mp3","tomorrow.mid","music2.mp3","music3.mp3"];
+pickedmusic = music[Math.floor(Math.random()*music.length)];
+document.writeln("<embed src="+pickedmusic+" hidden=true autostart=true loop=false>");
+</script></script><td bgcolor="#41199fff">k</tr>
+
+</html>

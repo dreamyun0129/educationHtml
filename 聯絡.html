@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+#img1{ opacity: 0.2; 
+    filter: alpha(opacity:80,style:3);
+    z-index:-1;
+    position:absolute;
+}
+.p1{color:brown;font:bold 140% 標楷體 }
+.p2{color:blue;font:bold 110% 標楷體 }
+</style>
+</head>
+<body>
+<img src="e1.png" id="img1">
+<marquee scrolldelay="0.1" behavior="alternate"> 
+<font size="5" color="#A830FF">
+<b>最新消息: 即日起免費體驗Dreamer平台!</b>
+</font>
+</marquee>
+<h1 style=background-color:#4CAFFF;align="center";color:green;font-size:20px>聯絡我們</h1>
+<p class=p2>
+親愛的顧客 您好：<br>
+如果您有任何建議或需求，FUN FUN主題樂園提供您不同的服務平台，您可撥打客服專線亦可選擇填選下表(線上留言)，或點選下列服務項目，以電子郵件方式與我們聯繫，我們將有專人儘速為您服務，謝謝。 客服付費專線:07-1236-8080</p>
+<b>留言資訊 ( * 號為必填欄位)</b><br>
+<br><form>
+<fieldset>
+<legend style="color:brown;font-weight:bold">服務項目類別</legend>
+<input name="service" type="radio" value="play" tabindex="1" checked>課程回饋
+<input name="service" type="radio" value="alien" tabindex="2">師資推薦
+<input name="service" type="radio" value="group" tabindex="3">平台意見<br>
+</fieldset><br>
+<fieldset>
+<legend style="color:brown;font-weight:bold">個人資料</legend>
+*留言標題 : <input name="topic" type="text" tabindex="1"><br>
+*您的名字 : <input name="name" type="text" tabindex="4"><br>
+*您的信箱 : <input name="mail" type="text" tabindex="5"><br>
+*性別: <input name="sex" type="radio" value="male" tabindex="6" checked>男
+<input name="sex" type="radio" value="female" tabindex="7">女
+</fieldset><br>
+<fieldset>
+<legend style="color:brown;font-weight:bold">意見調查</legend>
+請選一個你最喜歡的課程：<br>
+<form>
+<select name=courseList size=4 onChange="alert('你選的課程是「'+this.options[this.selectedIndex].text+'」')">
+	<option> 1. Linear Algebra
+	<option> 2. C Programming Language
+	<option selected> 3. Engineering Mathematics
+	<option> 4. Numerical Methods
+	<option> 5. Introduction to Artificial Intelligence
+	<option> 6. Web Programming
+	<option> 7. Artificial Neural Networks
+	<option> 8. Fuzzy Sets Theory and Applications
+	<option> 9. Audio Signal Processing and Recognition
+	<option> 10. Special Topics on MATLAB
+</select>
+</form>
+</fieldset><br>
+<fieldset>
+<legend style="color:brown;font-weight:bold">留言內容</legend>
+<textarea name="extra" rows="3" cols="40" tabindex="12">
+請留下您寶貴的意見吧!
+</textarea>
+</fieldset>
+<input type="submit" value="送出" tabindex="13" onclick="alert('我們已收到囉！!')">
+<input type="reset" value="清除" tabindex="14" onclick="alert('請重新填寫囉！!')">
+</form>
+
+
+
+

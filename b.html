@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta http-equiv="Refresh" content="60">
+</head>
+<style>
+p{color:blue;
+  font-size:16pt;
+  font-family:標楷體；
+  text-align:center；}
+ul{list-style-type:square;}
+</style>
+<body bgcolor=ccffff>
+<img src="念書.png" height="120" vspace="1" hspace="5">
+<ul>
+<li><p><a href="c.html" target="3">關於我們</a></p></li>
+<li><p>知識補給</p></li>
+<ul style=list-style-type:disc;font-size:14pt >
+ <li><a href="英.html" target="3">英文字彙重點</a></li>
+ <li><a href="山.html" target="3">台灣山脈分布</a></li>
+ <li><a href="星.html" target="3">星座介紹解析</a></li>
+ <li><a href="運.html" target="3">運動身體好好</a></li>
+ <li><a href="生.html" target="3">十二生肖介紹</a></li>  	
+</ul>
+<li><p><a href="放鬆.html" target="3">放鬆一下</a></p></li>
+<li><p><a href="網站.html" target="3">相關網站</a></p></li>
+<li><p><a href="聯絡.html" target="3">聯絡我們</a></p></li>
+</ul>
+<script>
+music=["聽海.mid", "膽小鬼.mid","music4.mp3", "如果雲知道.mid", "music1.mp3","tomorrow.mid","music2.mp3","music3.mp3"];
+pickedmusic = music[Math.floor(Math.random()*music.length)];
+document.writeln("<embed src="+pickedmusic+" hidden=true autostart=true loop=false>");
+</script>
+</body>
+</html>
